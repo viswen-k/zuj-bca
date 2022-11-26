@@ -1,0 +1,17 @@
+[app]
+  base_views_dir  = ""
+  http_port       = 8181
+  log_component   = "start"
+
+[[datasources]]
+  name                = "default-db"
+  access_type         = "password"
+  username            = "" # username to access mysql
+  password            = "" # password to access mysql
+  schema              = "" # name of schema inside mysql
+  [datasources.options]
+    host              = "localhost"
+    timezone          = "+08:00"
+    dialect           = "mysql"
+    [datasources.options.dialectOptions]
+      decimalNumbers  = true

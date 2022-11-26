@@ -102,3 +102,15 @@ dist
 
 # TernJS port file
 .tern-port
+
+# NodeJS modules
+/node_modules
+
+# Yarn.lock file
+yarn.lock
+
+# Prettier file
+/.prettierrc
+
+# Local configuration file
+/auth/config/local.toml
