@@ -114,3 +114,4 @@ yarn.lock
 
 # Local configuration file
 /auth/config/local.toml
+/core/dbmodel/zuj-bca.mwb.bak
