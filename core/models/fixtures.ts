@@ -20,8 +20,6 @@ class Fixtures extends CrudModel {
   }
 }
 
-const hooks = {};
-
 Fixtures.init(
   {
     tournament: model_specs.generic_string(),
@@ -33,7 +31,6 @@ Fixtures.init(
   },
   {
     ...model_utils.model_defaults(Fixtures.TABLENAME),
-    hooks,
     sequelize,
   }
 );

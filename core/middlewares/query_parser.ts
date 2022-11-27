@@ -1,9 +1,9 @@
 import { number_or_zero } from '@path/utilities/string_utils';
 import { RequestHandler } from 'express';
-import { FindOptions, OrderItem as OrderItemOptions } from 'sequelize';
+import { FindOptions, OrderItem as OrderItemOptions, WhereOptions } from 'sequelize';
 import { make, Request, Response } from './middleware';
 
-const DEFAULT_QUERY_LIMIT = 10;
+const DEFAULT_QUERY_LIMIT = 100;
 
 export type QueryExtras = { [index: string]: any };
 export type QueryConfig = {
@@ -23,6 +23,7 @@ export class QueryOptions implements FindOptions {
   limit?: number;
   offset?: number;
   order?: OrderItemOptions[];
+  where: WhereOptions | any = {};
 
   add_order(column: string, order: 'asc' | 'desc' = 'asc') {
     if (!this.order) this.order = [];

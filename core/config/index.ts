@@ -3,10 +3,6 @@ import { chirp } from '@path/utilities';
 import fs from 'fs';
 import Toml from 'toml';
 
-export type Configurations = {
-  [index: string]: any;
-};
-
 /* declare node environment */
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
