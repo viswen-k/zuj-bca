@@ -3,11 +3,11 @@
   log_component   = "start"
 
 [datasource]
-  name                = ""
-  access_type         = ""
-  username            = ""
-  password            = ""
-  schema              = ""
+  name                = "" # identifier of datasource
+  access_type         = "" # type of authentication protocol, i.e. password
+  username            = "" # username for authentication
+  password            = "" # password for authentication
+  schema              = "" # schema in database to be connected
   [datasource.options]
     host              = "localhost"
     timezone          = "+08:00"
